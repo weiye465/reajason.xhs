@@ -178,10 +178,6 @@ def save_metadata_md(note_id, api_data):
 ## 原始内容
 
 {data.get('作品描述', '（无描述）')}
-
-## 标签
-
-{', '.join(data.get('标签', [])) if data.get('标签') else '（无标签）'}
 """
     
     # 保存文件
