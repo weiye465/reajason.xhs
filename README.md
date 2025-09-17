@@ -73,12 +73,20 @@ curl http://127.0.0.1:5556/docs
 #### 安装Python依赖
 
 ```bash
+# 安装支持CUDA 11.8的PaddlePaddle GPU版本
+python -m pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
+
 # 安装PaddleOCR
-pip install paddlepaddle paddleocr
+pip install paddleocr
 
 # 安装其他依赖
 pip install requests pillow
 ```
+
+**注意**：
+- 当前系统支持 CUDA 11.8，需要从 PaddlePaddle 官方源安装对应的 cu118 版本
+- 如果没有GPU或CUDA版本不匹配，可以安装CPU版本：`pip install paddlepaddle`
+- PaddleOCR会根据系统环境自动选择使用GPU或CPU
 
 ### 2. 使用方法
 
@@ -168,7 +176,7 @@ python xhs_processor.py "https://www.xiaohongshu.com/explore/68237be300000000220
 - **xhs_processor.py**: 主处理脚本，协调整个工作流
 - **utils.py**: 工具函数（路径管理、输入解析、错误日志等）
 - **XHS-Downloader API**: Docker服务（端口5556），处理数据获取
-- **PaddleOCR**: PP-OCRv4模型，GPU加速将OCR时间从48秒降至0.3秒
+- **PaddleOCR**: PP-OCRv5 Server版模型，GPU加速将OCR时间从48秒降至0.3秒
 
 
 ## 开发说明

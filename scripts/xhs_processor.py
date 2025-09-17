@@ -45,18 +45,18 @@ def init_ocr():
             use_gpu = paddle.is_compiled_with_cuda() and paddle.device.cuda.device_count() > 0
             device = 'gpu:0' if use_gpu else 'cpu'
             
-            print(f"正在初始化OCR引擎 (PP-OCRv4 Mobile, 设备: {device})...")
+            print(f"正在初始化OCR引擎 (PP-OCRv5, 设备: {device})...")
             
             # 使用PP-OCRv4 Mobile轻量级模型，速度更快
             ocr = PaddleOCR(
-                ocr_version='PP-OCRv5',  # 使用v4版本（更快）
+                ocr_version='PP-OCRv5',  # 使用v5版本
                 use_doc_orientation_classify=False,
                 use_doc_unwarping=False,
                 use_textline_orientation=False,
                 lang='ch',
                 device=device  # 指定设备
             )
-            print(f"OCR引擎初始化完成 (PP-OCRv4 Mobile, {'GPU加速' if use_gpu else 'CPU模式'})")
+            print(f"OCR引擎初始化完成 (PP-OCRv5, {'GPU加速' if use_gpu else 'CPU模式'})")
         except ImportError:
             print("警告：PaddleOCR未安装，OCR功能将不可用")
             print("请运行: pip install paddlepaddle paddleocr")
