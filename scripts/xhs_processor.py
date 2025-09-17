@@ -93,7 +93,7 @@ def download_note_via_api(note_id_or_url):
     通过XHS-Downloader API获取笔记数据
     
     Args:
-        note_id_or_url: 笔记ID或完整URL
+        note_id_or_url: 笔记ID或完整URL（必须包含xsec_token参数）
     
     Returns:
         dict: API返回的数据，失败返回None
@@ -103,7 +103,14 @@ def download_note_via_api(note_id_or_url):
     # 判断是ID还是URL
     if note_id_or_url.startswith('http'):
         url = note_id_or_url
+        # 检查URL是否包含必需的token参数
+        if 'xsec_token=' not in url:
+            print(f"  ⚠️  警告: URL缺少xsec_token参数，可能无法正确获取数据")
+            print(f"     正确格式示例: https://www.xiaohongshu.com/explore/xxxxx?xsec_token=xxxxx")
     else:
+        # 如果只是ID，构建基础URL（注意：可能无法正常工作）
+        print(f"  ⚠️  警告: 仅提供ID可能无法获取数据，建议使用完整的带token的URL")
+        print(f"     正确格式: https://www.xiaohongshu.com/explore/{note_id_or_url}?xsec_token=xxxxx")
         url = f"https://www.xiaohongshu.com/explore/{note_id_or_url}"
     
     # 构建请求数据

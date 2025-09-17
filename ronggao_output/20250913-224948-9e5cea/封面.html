@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书封面图 - 找工作面试避坑指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Source Han Sans CN', 'Microsoft YaHei', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 1080px;
+            height: 1440px;
+            background: #FFFFFF;
+            padding: 80px 60px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content {
+            text-align: left;
+            color: #333333;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .line1 {
+            font-size: 110px;
+            font-weight: 900;
+            color: #000000;
+            line-height: 1.2;
+            letter-spacing: -2px;
+        }
+
+        .highlight-section {
+            margin: 20px 0;
+        }
+
+        .highlight-block {
+            background: #FF0000;
+            padding: 15px 20px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .highlight-text {
+            font-size: 95px;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1.2;
+        }
+
+        .line2 {
+            font-size: 85px;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        .line3 {
+            font-size: 85px;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        .line4 {
+            font-size: 85px;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        .highlight-inline {
+            background: #FF0000;
+            color: #FFFFFF;
+            padding: 5px 15px;
+        }
+
+        .emoji {
+            font-size: 80px;
+            vertical-align: middle;
+        }
+
+        .emphasis {
+            font-weight: 900;
+            color: #000000;
+        }
+
+        /* 响应式预览 */
+        @media (max-width: 1200px) {
+            .container {
+                transform: scale(0.8);
+                transform-origin: center;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                transform: scale(0.6);
+                transform-origin: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                transform: scale(0.4);
+                transform-origin: center;
+            }
+        }
+
+        /* 打印/导出样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- 第一部分：标题 -->
+            <div>
+                <div class="line1">
+                    大家找工作千万
+                </div>
+                <div class="line1" style="margin-top: -20px;">
+                    <span class="highlight-inline">别约到</span>
+                </div>
+            </div>
+
+            <!-- 第二部分：警示 -->
+            <div>
+                <div class="highlight-block">
+                    <span class="highlight-text">面试就去，</span>
+                </div>
+                <div class="line2" style="margin-top: 20px;">
+                    这里面起码
+                </div>
+                <div class="line2" style="margin-top: -10px;">
+                    有80%有坑。
+                </div>
+            </div>
+
+            <!-- 第三部分：清单介绍 -->
+            <div>
+                <div class="line3">
+                    我下面列了一个
+                </div>
+                <div class="line3" style="margin-top: -10px;">
+                    问题清单，一共
+                </div>
+                <div class="line3" style="margin-top: -10px;">
+                    <span class="emphasis">10个问题</span>。
+                </div>
+            </div>
+
+            <!-- 第四部分：行动号召 -->
+            <div>
+                <div class="highlight-block" style="width: fit-content;">
+                    <span class="highlight-text">面试前问清楚再去，别</span>
+                </div>
+                <div class="highlight-block" style="width: fit-content; margin-top: -5px;">
+                    <span class="highlight-text">被刷KPI了。</span>
+                </div>
+                <div class="line4" style="margin-top: 20px;">
+                    浪费时间精
+                </div>
+                <div class="line4" style="margin-top: -10px;">
+                    力还费 <span class="emoji">💰</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 可选：添加导出功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加右键保存功能提示
+            document.querySelector('.container').addEventListener('contextmenu', function(e) {
+                console.log('右键点击可保存为图片（使用浏览器截图插件）');
+            });
+
+            // 自动调整字体大小以适应容器
+            function adjustFontSize() {
+                const container = document.querySelector('.container');
+                const content = document.querySelector('.content');
+
+                // 确保内容不超出容器
+                if (content.scrollHeight > container.clientHeight - 240) {
+                    const scale = (container.clientHeight - 240) / content.scrollHeight;
+                    content.style.transform = `scale(${scale})`;
+                    content.style.transformOrigin = 'top left';
+                }
+            }
+
+            // 页面加载后调整
+            adjustFontSize();
+
+            // 窗口大小改变时调整
+            window.addEventListener('resize', adjustFontSize);
+        });
+    </script>
+</body>
+</html>

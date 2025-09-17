@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书正文图1 - 面试问题清单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Source Han Sans CN', 'Microsoft YaHei', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 1080px;
+            min-height: 1440px;
+            background: #FFFFFF;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            /* 移除overflow限制，让内容完全显示 */
+        }
+
+        .header-bar {
+            background: #FFD700;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .content {
+            padding: 30px 50px 60px 50px;
+            /* 不限制高度，让内容自然展开 */
+        }
+
+        .subtitle {
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .question-block {
+            margin-bottom: 45px;
+        }
+
+        .question-title {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .question-number {
+            font-size: 42px;
+            color: #FF0000;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .question-text {
+            font-size: 42px;
+            color: #FF0000;
+            font-weight: 700;
+        }
+
+        .answer-text {
+            font-size: 36px;
+            color: #000000;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        .warning {
+            color: #FF0000;
+        }
+
+        /* 隐藏滚动条但保持滚动功能 */
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* 响应式预览 */
+        @media (max-width: 1200px) {
+            .container {
+                transform: scale(0.8);
+                transform-origin: center;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                transform: scale(0.6);
+                transform-origin: center;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 黄色标题栏 -->
+        <div class="header-bar">
+            面试前问清这10个问题，避开80%垃圾公司
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 副标题 -->
+            <div class="subtitle">
+                一、面试前线上先问清楚（避免白跑一趟）
+            </div>
+
+            <!-- 问题1 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">1.</span>
+                    <span class="question-text">有没有试岗期？</span>
+                </div>
+                <div class="answer-text">
+                    遇到说"先试三天"的公司快逃！有试岗期的不是想白嫖就是不够优质。试岗不通过还不给工资，这种公司一般都不建议去哈。
+                </div>
+            </div>
+
+            <!-- 问题2 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">2.</span>
+                    <span class="question-text">薪资构成啥样？</span>
+                </div>
+                <div class="answer-text">
+                    小心月薪1万=底薪4k+绩效6k！薪资一般是基本工资+绩效+补贴+奖金+其他福利。问清是12薪、13薪还是更多，工资税前还是税后？有责还是无责？基层岗位绩效最高20%，基本工资占比低于70%的pass，不然辛苦一个月只拿底薪。
+                </div>
+            </div>
+
+            <!-- 问题3 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">3.</span>
+                    <span class="question-text">五险一金啥时候交？</span>
+                </div>
+                <div class="answer-text">
+                    没有直接pass，正规公司入职就缴纳。缴费基数越高退休工资越高，公积金比例(5%-12%)越高，dai款买房能dai更多哟。本地缴纳还是异地缴纳也要问清（有的公司总部在外地）。
+                </div>
+            </div>
+
+            <!-- 问题4 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">4.</span>
+                    <span class="question-text">几号发工资？</span>
+                </div>
+                <div class="answer-text">
+                    15号之后发薪要警惕！可能现金流有问题。20号后慎重考虑，月末发工资的公司放最后位吧。私人转账发薪的也要小心。
+                </div>
+            </div>
+
+            <!-- 问题5 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">5.</span>
+                    <span class="question-text">上班时间咋安排？</span>
+                </div>
+                <div class="answer-text">
+                    双休、单休还是大小周？每天几点到几点？法定节假日正常休吗？有没有年假？带薪还是不带薪？能双休就别要单休，差距真的很大，休息时间不同幸福感也不同。
+                </div>
+            </div>
+
+            <!-- 问题6 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">6.</span>
+                    <span class="question-text">团队有几个人？</span>
+                </div>
+                <div class="answer-text">
+                    团队只有1-2个人，进去一定是苦力。单兵作战岗=一人干三人活！了解团队成员及汇报关系，避免入职一人部门，所有工作都你一个人干，没人提点只能自己悟。
+                </div>
+            </div>
+
+            <!-- 问题7 -->
+            <div class="question-block">
+                <div class="question-title">
+                    <span class="question-number">7.</span>
+                    <span class="question-text">试用期多久？</span>
+                </div>
+                <div class="answer-text">
+                    记住：3年he同试用期不超6个月，超过违法！转正标准是啥？说不出具体标准的，转正全靠老板心情。试用期工资多少？缴纳五险吗？
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 自动调整内容以适应容器
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.querySelector('.content');
+            const container = document.querySelector('.container');
+
+            // 检查内容是否超出
+            function checkOverflow() {
+                if (content.scrollHeight > content.clientHeight) {
+                    console.log('内容超出，可滚动查看或分页');
+                }
+            }
+
+            checkOverflow();
+            window.addEventListener('resize', checkOverflow);
+        });
+    </script>
+</body>
+</html>

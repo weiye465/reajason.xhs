@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书正文图1 - 问题1-4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', 'Source Han Sans CN', 'Microsoft YaHei', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 1080px;
+            height: 1440px;
+            background: #FFFFFF;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-bar {
+            background: #FFD700;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            font-weight: 700;
+            color: #000000;
+            flex-shrink: 0;
+        }
+
+        .content {
+            padding: 35px 50px 50px 50px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .subtitle {
+            font-size: 34px;
+            color: #333333;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .questions-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .question-block {
+            margin-bottom: 0;
+        }
+
+        .question-title {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .question-number {
+            font-size: 40px;
+            color: #FF0000;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .question-text {
+            font-size: 40px;
+            color: #FF0000;
+            font-weight: 700;
+        }
+
+        .answer-text {
+            font-size: 34px;
+            color: #000000;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .page-indicator {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            font-size: 28px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 黄色标题栏 -->
+        <div class="header-bar">
+            面试前问清这10个问题，避开80%垃圾公司
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 副标题 -->
+            <div class="subtitle">
+                一、面试前线上先问清楚（避免白跑一趟）
+            </div>
+
+            <div class="questions-wrapper">
+                <!-- 问题1 -->
+                <div class="question-block">
+                    <div class="question-title">
+                        <span class="question-number">1.</span>
+                        <span class="question-text">有没有试岗期？</span>
+                    </div>
+                    <div class="answer-text">
+                        遇到说"先试三天"的公司快逃！有试岗期的不是想白嫖就是不够优质。试岗不通过还不给工资，这种公司一般都不建议去哈。
+                    </div>
+                </div>
+
+                <!-- 问题2 -->
+                <div class="question-block">
+                    <div class="question-title">
+                        <span class="question-number">2.</span>
+                        <span class="question-text">薪资构成啥样？</span>
+                    </div>
+                    <div class="answer-text">
+                        小心月薪1万=底薪4k+绩效6k！薪资一般是基本工资+绩效+补贴+奖金+其他福利。问清是12薪、13薪还是更多，工资税前还是税后？有责还是无责？基层岗位绩效最高20%，基本工资占比低于70%的pass，不然辛苦一个月只拿底薪。
+                    </div>
+                </div>
+
+                <!-- 问题3 -->
+                <div class="question-block">
+                    <div class="question-title">
+                        <span class="question-number">3.</span>
+                        <span class="question-text">五险一金啥时候交？</span>
+                    </div>
+                    <div class="answer-text">
+                        没有直接pass，正规公司入职就缴纳。缴费基数越高退休工资越高，公积金比例(5%-12%)越高，dai款买房能dai更多哟。本地缴纳还是异地缴纳也要问清（有的公司总部在外地）。
+                    </div>
+                </div>
+
+                <!-- 问题4 -->
+                <div class="question-block">
+                    <div class="question-title">
+                        <span class="question-number">4.</span>
+                        <span class="question-text">几号发工资？</span>
+                    </div>
+                    <div class="answer-text">
+                        15号之后发薪要警惕！可能现金流有问题。20号后慎重考虑，月末发工资的公司放最后位吧。私人转账发薪的也要小心。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页码指示 -->
+        <div class="page-indicator">1/4</div>
+    </div>
+</body>
+</html>
