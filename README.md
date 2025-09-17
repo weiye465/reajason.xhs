@@ -2,6 +2,22 @@
 
 一个专业的小红书笔记融稿工具，通过赛马机制从多篇爆款中提取最优内容，生成高质量的图片文本和正文。
 
+## 软件更新说明
+
+如果需要更新软件，请按照以下步骤操作：
+
+1. 从 git main 分支拉取最新代码
+   ```bash
+   git pull origin main
+   ```
+
+2. 只需要更新以下文件和文件夹：
+   - `.claude/commands` 文件夹
+   - `scripts` 文件夹下的所有文件
+   - `README.md` 文件
+
+其他文件和文件夹（如 `xhs_notes`、`ronggao_output` 等）保持不变即可。
+
 ## 功能特点
 
 - 🔍 **智能爬取**：通过XHS-Downloader API获取笔记数据，无需手动配置Cookie
